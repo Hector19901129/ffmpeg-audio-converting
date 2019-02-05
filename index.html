@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple Recorder.js demo with record, stop and pause</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="8db2a8df-270b-47e9-bd71-bb52304a8a9b" type="text/javascript" async></script>
+	<script id="CookieDeclaration" src="https://consent.cookiebot.com/8db2a8df-270b-47e9-bd71-bb52304a8a9b/cd.js" type="text/javascript" async></script>
+  <script src="jquery.js"></script>
+</head>
+  <body>
+    <a id="download_link"></a>
+    <div style="padding-bottom : 10px;">
+      <h1 style="color:#332255">Choose</h1>
+        <label for="avatar">Choose a input audio file</label>
+
+        <input type="file" id="fileUpload" name="fileUpload">
+
+        <input type="text" id="filePath" name="filePath" value="output/output.wav">
+
+        <button id="convertFromGivenFileButton">Convert</button>
+    </div>
+    <div id="controls">
+        <h1 style="color:#332255">Record</h1>
+      
+  	 <button id="recordButton">Record</button>
+  	 <button id="pauseButton" disabled>Pause</button>
+  	 <button id="stopButton" disabled>Stop</button>
+    </div>
+    <div id="formats">Format: start recording to see sample rate</div>
+  	<h3>Recordings</h3>
+  	<ol id="recordingsList"></ol>
+
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+  	<script src="recorder.js"></script>
+    <script src="app.js"></script>
+    
+    
+  </body>
+</html>
